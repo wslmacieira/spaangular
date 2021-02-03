@@ -12,3 +12,26 @@
   </button>
 </mat-toolbar>
 
+<div>
+  <!-- <spa-alunos [valorInicial]= "valor"></spa-alunos> -->
+
+  <button (click)="mudarValor()">Mudar Valor</button>
+  <button (click)="reiniciarValor()">Reiniciar Valor</button>
+  <button (click)="exibirTabela()">{{exibeTabela ? 'Ocultar Tabela': 'Exibir Tabela'}}</button>
+</div>
+
+<table *ngIf="exibeTabela">
+  <tr>
+    <th>Nome</th>
+    <th>Idade</th>
+    <th>E-mail</th>
+    <th>Curso</th>
+  </tr>
+  <tr *ngFor="let aluno of listaAlunos">
+    <td>{{aluno.nome}}</td>
+    <td>{{aluno.idade}}</td>
+    <td>{{aluno.email}}</td>
+    <td>{{aluno.curso}}</td>
+  </tr>
+</table>
+
