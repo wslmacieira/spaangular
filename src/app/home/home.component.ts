@@ -12,30 +12,30 @@ export class HomeComponent implements OnInit {
   exibeTabela: boolean;
 
   listaAlunos: Alunos[] = [
-    {nome: 'Daniela', idade: 41, email:'dani@email', curso: 'Nutrição'},
-    {nome: 'Wagner', idade: 41, email:'wagner@email', curso: 'Ciencias da Computação'},
-    {nome: 'Lorenzo', idade: 7, email:'lorenzo@email', curso: '2 serie'},
-    {nome: 'Lorena', idade: 41, email:'lorena@email', curso: 'Creche'},
-  ]
+    {nome: 'Daniela', idade: 41, email: 'dani@email', curso: 'Nutrição'},
+    {nome: 'Wagner', idade: 41, email: 'wagner@email', curso: 'Ciencias da Computação'},
+    {nome: 'Lorenzo', idade: 7, email: 'lorenzo@email', curso: '2 serie'},
+    {nome: 'Lorena', idade: 41, email: 'lorena@email', curso: 'Creche'},
+  ];
 
   displayedColumns: string[] = ['Nome', 'Idade', 'E-mail', 'Curso'];
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.valor = 5;
     this.exibeTabela = false;
   }
 
-  mudarValor() {
+  mudarValor(): void {
     this.valor++;
   }
 
-  reiniciarValor() {
+  reiniciarValor(): void {
     this.valor = 0;
   }
 
-  exibirTabela() {
-    this.exibeTabela = !this.exibeTabela
+  exibirTabela(): void {
+    this.exibeTabela = !this.exibeTabela;
   }
 }
