@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'spa-alunos',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlunosComponent implements OnInit {
 
-  valorInicial: number = 10;
+  @Input() valorInicial: number = 10;
 
   constructor() { }
 
